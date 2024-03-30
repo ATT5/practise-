@@ -5,6 +5,7 @@ const app = express();
 app.use("/add", (req, res, next) => {
   console.log("in another middleware");
   res.send("<h1>The add product page</h1>");
+  res.send('<form><input type=''/></form>')
 });
 
 app.use("/", (req, res, next) => {
@@ -13,3 +14,4 @@ app.use("/", (req, res, next) => {
 });
 
 app.listen(3000);
+console.log('hello')
